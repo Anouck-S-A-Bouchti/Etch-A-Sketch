@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Etch-A-Sketch</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="buttonDiv">
+        <button id="numberofsquareButton">How many squares per side?</button>
+    </div>
+    <div id="mainContent">
+
+
+        <div id="changeEffectButton">
+        <button class="effectButton" id="originalButton">Original</button>
+        <button class="effectButton" id="blackButton">Black</button>
+        <button class="effectButton" id="shadingButton">Shading</button>
+        <button class="effectButton" id="eraseButton">Erase</button>
+        </div>
+        
+        <div id="container">
+        
+        </div>
+        <div id="sliderDiv">
+            <label for="gridSizeSlider">Grid Size: <span id="sliderValue">16</span></label>
+            <input type="range" id="gridSizeSlider" min="10" max="35" value="16" orient = "vertical">
+        </div>
+    </div>
+    
+
+    
+
+
+
+    <!--script-->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+
+/*GENERAL APPARENCE*/
+body {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #F0EAD6;
+    overflow: hidden;
+}
+
+
+/*TOP PART, BUTTON*/
+
+
+#buttonDiv{
+    width: 90vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#numberofsquareButton {
+    
+    padding: 10px;
+    font-size: 16px;
+    height: 5vw;
+    width: 20vw;
+    background-color: #FFB347;
+    box-shadow: 8px 5px  rgba(0, 0, 0, 0.8);
+    font-family: "VT323", monospace;
+    border: none;
+
+
+    
+
+;
+    
+}
+#numberofsquareButton:hover{
+    background-color: #FF6F61;
+    box-shadow: inset  -5px -10px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+
+
+/*GAME, BUTTON OF THE GAME, SLIDER*/
+#mainContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vw;
+}
+
+
+.effectButton{
+    background-color: lightsalmon;
+    border: none;
+    width: 10vw;
+    height: 5vw;
+    border-radius: 20px;
+    font-family: "VT323", monospace;
+    font-weight: bolder;
+    font-size: 2rem;
+    box-shadow:  5px 10px rgba(0, 0, 0, 0.2);
+}
+.effectButton:hover{
+    background-color: lightsalmon;
+    border: none;
+    width: 10vw;
+    height: 5vw;
+    border-radius: 20px;
+    font-family: "VT323", monospace;
+    font-weight: bolder;
+    font-size: 2rem;
+    box-shadow: inset 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+#container {
+    display: grid;
+    --grid-size : 16;
+    width: 60vh;
+    height: 50vh;
+    grid-template-columns: repeat(var(--grid-size), 1fr);
+    grid-template-rows: repeat(var(--grid-size), 1fr);
+    background-color: #E0E4CC;
+    box-shadow:  0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+#changeEffectButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50vh;
+
+}
+
+#sliderDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-cell {
+    border: 1px solid #8C8C8C;
+}
+
+
+#sliderDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 25vh; /* Match the height of the grid */
+    justify-content: center;
+    gap: 10px;
+}
+#sliderDiv label{
+    font-family: 'VT323', monospace;
+    color: #6B5B95;
+    font-size: 1.5rem;
+    height: 25vh;
+}
+
+#gridSizeSlider {
+    
+    height: 25vh; /* Height of the slider */
+    writing-mode: bt-lr; /* Rotate the slider */
+    transform: rotate(-90deg); /* Rotate to make it vertical */
+    transform-origin: center center;
+    
+}
+
+
+/**/
+/* General slider styles */
+input[type="range"] {
+    -webkit-appearance: none; /* Override default WebKit styling */
+    -moz-appearance: none; /* Override default Mozilla styling */
+    appearance: none; /* Ensure all browsers use custom styles */
+    width: 8px; /* Width of the slider track */
+    height: 100px; /* Height of the slider */
+    background: linear-gradient(180deg, #C0C0C0, #A0A0A0, #808080);
+    border-radius: 5px;
+    outline: none;
+    transform: rotate(270deg); /* Rotate to make it vertical */
+    transform-origin: center;
+}
+
+/* WebKit browsers (Chrome, Safari, etc.) - Slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; /* Size of the thumb */
+    height: 20px;
+    background: #C94C4C; /* Retro red */
+    border-radius: 50%; /* Rounded thumb */
+    cursor: pointer;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Mozilla browsers (Firefox) - Slider thumb */
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #C94C4C;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Active state for thumb in WebKit browsers */
+input[type="range"]::-webkit-slider-thumb:active {
+    background: #FFB347; /* Change color when dragging */
+}
+
+/* Active state for thumb in Mozilla browsers */
+input[type="range"]::-moz-range-thumb:active {
+    background: #FFB347;
+}
+
+/* Hide default track in Firefox */
+input[type="range"]::-moz-range-track {
+    background: transparent;
+}
+
+/* Hide default track in IE */
+input[type="range"]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+/* Adjust the width of the slider */
+#gridSizeSlider {
+    width: 15vh; /* Length of the vertical slider */
+    height: 5vh; /* Height of the slider */
+}
